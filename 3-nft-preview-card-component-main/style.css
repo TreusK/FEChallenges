@@ -1,0 +1,121 @@
+body, html, * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(217, 54%, 11%);
+}
+
+.eqCardContainer {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    min-width: 350px;
+    padding: 25px;
+    font-family: 'Outfit', sans-serif;
+    border-radius: 10px;
+    background-color: hsl(216, 50%, 16%);
+}
+
+.valueAndTime {
+    display: flex;
+    justify-content: space-between;
+}
+
+.valueContainer, .timeContainer {
+    display: flex;
+}
+
+.icon {
+    align-self: center;
+    margin-right: 10px;
+}
+
+.creatorContainer {
+    display: flex;
+    align-items: center;
+    border-top: solid 1px hsl(215, 32%, 27%);
+    padding-top: 20px;
+}
+
+.creatorContainer a {
+    text-decoration: none;
+    color: white;
+}
+.creatorContainer a:hover {
+    color: hsl(178, 100%, 50%);
+}
+
+.mainImageContainer {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+}
+
+.mainEqImage {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsla(178, 100%, 50%, 0.645);
+    border-radius: 20px;
+}
+
+.gap {
+    margin-bottom: 20px;
+}
+
+.avatarIcon {
+    display: inline-block;
+    border: solid 1px white;
+    border-radius: 50%;
+    height: 32px;
+    width: 32px;
+    margin-right: 20px;
+}
+
+p {
+    display: inline-block;
+    color: hsl(220, 15%, 55%);
+}
+
+.valueContainer p {
+    color: hsl(178, 100%, 50%)
+}
+
+.hidden {
+    display: none;
+}
+
+h3 {
+    color: white;
+}
+h3:hover {
+    color: hsl(178, 100%, 50%);
+    cursor: pointer;
+}
+
+
