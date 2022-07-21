@@ -1,0 +1,133 @@
+html, body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-size: 15px;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+.container {
+    background-color: hsl(233, 47%, 7%);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Data card styles */
+.insightsCard {
+    display: flex;
+    justify-content: space-between;
+    width: 1080px;
+    height: 446px;
+    background-color: hsl(244, 38%, 16%);
+    border-radius: 10px;
+}
+
+.insightsCardData h1, .numbersInfoSingle h2 {
+    color: hsl(0, 0%, 100%);
+}
+.insightsCardData p {
+    color: hsla(0, 0%, 100%, 0.75);
+}
+.numbersInfoSingle p {
+    color: hsla(0, 0%, 100%, 0.6);
+}
+
+.insightsCardData {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.insightsCardDataContainer {
+    width: 80%;
+}
+
+.insightsCardDataContainer h1 {
+    margin-bottom: 1em;
+}
+.pData {
+    margin-bottom: 5em;
+    line-height: 170%;
+    font-size: 0.9rem;
+}
+
+span {
+    color: hsl(277, 64%, 61%);
+}
+
+.numbersInfo {
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+}
+
+
+.numbersInfo h2 {
+    margin-bottom: 1em;
+}
+.numbersInfo p {
+    font-size: 0.8rem;
+}
+
+
+
+/* Img styles */
+.insightsCardImage {
+    flex: 1;
+    background-color: hsl(277, 64%, 61%);
+    border-radius: 0 10px 10px 0;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: multiply;
+    opacity: 0.8;
+    border-radius: 0 10px 10px 0;
+}
+
+@media screen and (max-width: 1080px) {
+    body {
+        font-size: 10px;
+    }
+    .insightsCard {
+        flex-direction: column-reverse;
+        width: 40%;
+        height: auto;
+        min-width: 300px;
+        margin: 50px 0;
+    }
+    .insightsCardData h1 {
+        margin-top: 2rem;
+    }
+    .insightsCardData {
+        text-align: center;
+    }
+    .insightsCardImage, img {
+        border-radius: 10px 10px 0 0;
+    }
+    .pData {
+        margin-bottom: 2em;
+    }
+    .numbersInfo {
+        flex-direction: column;
+        width: 100%;
+    }
+    .numbersInfo h2 {
+        margin-bottom: 0.4em;
+    }
+    .numbersInfo p {
+        margin-bottom: 1em;
+    }
+    .container {
+        height: auto;
+    }
+}
