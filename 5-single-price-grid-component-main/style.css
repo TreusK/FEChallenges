@@ -1,0 +1,107 @@
+* {
+    box-sizing: border-box;
+}
+html {
+    font-size: 12px;
+}
+html, body, p, h1, h2, h3 {
+    font-family: 'Karla', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+span {
+    font-size: 2rem;
+}
+
+.marginBottom {
+    margin-bottom: 1em;
+}
+.marginLeft {
+    margin-left: 1em;
+}
+
+.bigContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(204, 43%, 93%);
+}
+
+.container {
+    width: 90%;
+    min-width: 200px;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.bottomFlex {
+    display: flex;
+    flex-direction: column;
+}
+
+.miniCont {
+    padding: 3em;
+}
+
+.joinUsContainer {
+    background-color: white;
+}
+.monthlySubContainer {
+    background-color: hsl(179, 62%, 43%);
+    color: white;
+}
+.whyUsContainer {
+    background-color: hsl(179,46%,51%);
+    color: white;
+}
+.whyUsContainer p {
+    margin: 0.3em;
+}
+
+.perMonth29Container {
+    display: flex;
+    align-items: center;
+}
+.perMonth29 {
+    font-size: 2em;
+    font-weight: 700;
+}
+
+
+.joinUsContainer h2 {
+    color: hsl(179, 62%, 43%);
+}
+.yellowText {
+    color: hsl(71, 73%, 54%);
+}
+.bluishText {
+    color: hsl(218, 22%, 67%);
+    line-height: 150%;
+}
+
+.signUp {
+    background-color: hsl(71, 73%, 54%);
+    padding: 1em;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 5px;
+}
+
+@media screen and (min-width: 600px) {
+    .bigContainer {
+        min-height: 100vh;
+    }
+    .container {
+        max-width: 500px;
+    }
+    .bottomFlex {
+        flex-direction: row;
+    }
+    .bottomFlex div {
+        flex: 1;
+    }
+}
