@@ -1,0 +1,143 @@
+* {
+    box-sizing: border-box;
+}
+body, html, p, h1 {
+    margin: 0;
+    padding: 0;
+    font-family: 'Libre Franklin', sans-serif;
+}
+
+span {
+    font-weight: 300;
+    color: grey;
+}
+
+.hidden {
+    display: none;
+}
+
+.emptyString, .invalidEmail {
+    color: hsl(354, 100%, 66%);
+    font-size: 0.8em;
+}
+
+.container {
+    width: 50%;
+    margin: 0 auto;
+    padding: 3em;
+}
+
+.mainImg {
+    width: 400px;
+}
+
+.logoContainer {
+    display: flex;
+    justify-content: center;
+    padding: 1em 0;
+}
+
+.launchInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1em 0 2em 0;
+}
+
+.launchInfo h1 {
+    font-size: 2.2rem;
+}
+
+.launchInfo p {
+    margin-top: 1em;
+    font-size: 0.9rem;
+}
+
+.mailAndBtn {
+    display: flex;
+    gap: 10px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+input {
+    all: unset;
+    border-radius: 20px;
+    border: solid 1px lightgray;
+    padding: 0.5em;
+    padding-left: 1em;
+    flex: 3;
+    font-size: 0.8rem;
+}
+
+input::placeholder {
+    color: gray;
+}
+
+.notifyMeBtn {
+    font-size: 0.8rem;
+    border-radius: 20px;
+    text-align: center;
+    padding: 0.8em;
+    flex: 1; 
+    color: white;
+    background-color: hsl(223, 87%, 63%);
+    user-select: none;
+}
+
+.notifyMeBtn:hover {
+    background-color: hsl(223, 91%, 70%);
+    cursor: pointer;
+}
+
+.imgContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2em 0;
+}
+
+.mediaIcons {
+    display: flex;
+    justify-content: space-around;
+    width: 40%;
+    margin: 0 auto;
+}
+
+.mediaIcons .imgContainer {
+    padding: 0.3em;
+    border-radius: 50%;
+    background-color: hsl(220, 14%, 96%);
+    height: 40px;
+    width: 40px;
+}
+
+.mediaIcons .imgContainer:hover {
+    background-color: hsl(223, 91%, 70%);
+    color: white;
+    cursor: pointer;
+}
+
+.mediaIconsContainer p {
+    text-align: center;
+    margin-top: 1em;
+    font-size: 0.7rem;
+    color: gray;
+}
+
+@media screen and (max-width: 1000px) {
+    html {
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 700px) {
+    .container {
+        width: 90%;
+    }
+    .mailAndBtn {
+        flex-direction: column;
+    }
+    input, .notifyMeBtn {
+        padding: 1em;
+    }
+}
