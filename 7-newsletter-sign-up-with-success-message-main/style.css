@@ -1,0 +1,87 @@
+/* reset */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+
+
+/* general */
+@font-face {
+  font-family: "Roboto";
+  src: url("./assets/fonts/Roboto-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "RobotoBold";
+  src: url("./assets/fonts/Roboto-Bold.ttf") format("truetype");
+}
+
+body {
+	font-family: "Roboto", sans-serif;
+}
+
+.hidden {
+	display: none;
+}
+
+
+
+/* form container */
+
+.formContainer {
+	line-height: 1.5;
+}
+
+img {
+  height: auto;
+  width: 100%;
+  max-width: 400px;
+}
+
+.formText {
+	padding: 30px;
+}
+
+h1 {
+	font-family: "RobotoBold";
+	padding-top: 1rem;
+}
+
+.formTextP {
+	padding-top: 1.5rem ;
+}
+
+
+form input, button {
+	margin-bottom: 1rem;
+	padding: 1rem;
+	width: 100%;
+	border-radius: 7px;
+	border: 1px solid gray;
+}
+
+button {
+	background-color: hsl(234, 29%, 20%);
+	color: white;
+}
+
+form label {
+	font-size: 0.8rem;
+}
+
+
+.listItem {
+	display: flex;
+	padding-top: 1.5rem;
+	gap: 20px;
+}
+
+.listItem img {
+	width: 20px;
+	margin-top: 0.1rem;
+	align-self: flex-start;
+}
+
+
