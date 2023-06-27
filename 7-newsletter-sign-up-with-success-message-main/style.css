@@ -20,6 +20,9 @@
 
 body {
 	font-family: "Roboto", sans-serif;
+	max-width: 400px;
+	min-width: 300px;
+	margin: 0 auto;
 }
 
 .hidden {
@@ -47,6 +50,7 @@ img {
 h1 {
 	font-family: "RobotoBold";
 	padding-top: 1rem;
+	font-size: 2.3rem;
 }
 
 .formTextP {
@@ -55,20 +59,26 @@ h1 {
 
 
 form input, button {
-	margin-bottom: 1rem;
+	margin: 0 0.1rem 1rem 0.1rem;
 	padding: 1rem;
 	width: 100%;
 	border-radius: 7px;
 	border: 1px solid gray;
 }
 
+form input {
+	margin-top: 0.2rem;
+}
+
 button {
 	background-color: hsl(234, 29%, 20%);
 	color: white;
+	font-family: "RobotoBold", sans-serif;
 }
 
 form label {
-	font-size: 0.8rem;
+	font-size: 0.7rem;
+	font-family: "RobotoBold", sans-serif;
 }
 
 
