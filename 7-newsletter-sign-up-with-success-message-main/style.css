@@ -29,11 +29,15 @@ body {
 	display: none;
 }
 
+.flex {
+	display: flex;
+}
+
 
 
 /* form container */
 
-.formContainer {
+.formContainer, .successContainer {
 	line-height: 1.5;
 }
 
@@ -93,5 +97,28 @@ form label {
 	margin-top: 0.1rem;
 	align-self: flex-start;
 }
+
+.successContainer {
+	padding: 30px;
+	height: 100vh;
+	flex-direction: column;
+	justify-content:  center;
+}
+
+.successContainer img {
+	width: 50px;
+	margin-bottom: 30px;
+}
+
+.successContainer h1 {
+	padding-bottom: 20px;
+	line-height: 1;
+}
+
+.successContainer button {
+	margin-top: auto;
+}
+
+
 
 

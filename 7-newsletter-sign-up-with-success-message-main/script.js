@@ -5,6 +5,7 @@ let successContainer = document.querySelector('.successContainer');
 formButton.addEventListener('click', handleFormBtnClick);
 
 function handleFormBtnClick(e) {
-	formContainer.classList.toggle('hidden');
-	successContainer.classList.toggle('hidden');
+	formContainer.classList.add('hidden');
+	successContainer.classList.add('flex');
+	successContainer.classList.remove('hidden');
 }
