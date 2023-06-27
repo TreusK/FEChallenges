@@ -106,6 +106,12 @@ form label {
 	align-self: flex-start;
 }
 
+.invalid {
+	border: 1px solid red;
+	color: red;
+	background-color: #FFCCCB;
+}
+
 
 /* success card */
 
@@ -130,7 +136,9 @@ form label {
 }
 
 
+
 /* media queries */
+
 @media (min-width: 600px) {
 	body {
 		background-color: hsl(235, 18%, 26%);
@@ -147,6 +155,7 @@ form label {
 	}
 	.formContainer {
 		flex-direction: row-reverse;
+		justify-content: space-between;
 		max-width: 90%;
 	}
 	.successContainer {
