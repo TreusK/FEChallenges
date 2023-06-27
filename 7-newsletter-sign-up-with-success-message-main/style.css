@@ -20,9 +20,7 @@
 
 body {
 	font-family: "Roboto", sans-serif;
-	max-width: 400px;
 	min-width: 300px;
-	margin: 0 auto;
 }
 
 .hidden {
@@ -39,12 +37,18 @@ body {
 
 .formContainer, .successContainer {
 	line-height: 1.5;
+	max-width: 400px;
+	margin: 0 auto;
+	flex-direction: column;
 }
 
-img {
+.illusMobile {
   height: auto;
   width: 100%;
   max-width: 400px;
+}
+.illusDesktop {
+	display: none;
 }
 
 .formText {
@@ -80,6 +84,10 @@ button {
 	font-family: "RobotoBold", sans-serif;
 }
 
+button:hover {
+	background-color: hsl(4, 100%, 67%);
+}
+
 form label {
 	font-size: 0.7rem;
 	font-family: "RobotoBold", sans-serif;
@@ -98,10 +106,12 @@ form label {
 	align-self: flex-start;
 }
 
+
+/* success card */
+
 .successContainer {
 	padding: 30px;
 	height: 100vh;
-	flex-direction: column;
 	justify-content:  center;
 }
 
@@ -117,6 +127,49 @@ form label {
 
 .successContainer button {
 	margin-top: auto;
+}
+
+
+/* media queries */
+@media (min-width: 600px) {
+	body {
+		background-color: hsl(235, 18%, 26%);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100vh;
+		scale: 75%;
+	}
+	.formContainer, .successContainer {
+		background-color: white;
+		padding: 30px;
+		border-radius: 10px;
+	}
+	.formContainer {
+		flex-direction: row-reverse;
+		max-width: 90%;
+	}
+	.successContainer {
+		width: 50%;
+		height: auto;
+	}
+	.successContainer p {
+		margin-bottom: 30px;
+	}
+
+	.illusMobile {
+		display: none;
+	}
+	.illusDesktop {
+		display: block;
+		max-width: 40%;
+	}
+}
+
+@media (min-width: 1200px) {
+	body {
+		scale: 90%;
+	}
 }
 
 
