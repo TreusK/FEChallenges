@@ -1,4 +1,100 @@
+/* resets */
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+button {
+    display: block;
+    border: none;
+    padding: 1rem;
+    margin: 0;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: center;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+
+
+/* general */ 
+
 main {
 	height: 100vh;
-	background-color: hsl(0, 100%, 67%);
+	background-color: hsl(0, 0%, 94%);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#calcContainer {
+	background-color: white;
+	padding: 30px;
+	border-radius: 10px;
+	border-bottom-right-radius: 50px;
+}
+
+/* form */
+
+form {
+	display: flex;
+	justify-content: space-between;
+	gap: 10px;
+}
+
+form label {
+	display: block;
+}
+
+form input {
+	padding: 10px;
+	width: 80px;
+}
+
+
+/* button container */
+.btnContainer {
+	position: relative;
+	margin: 1em 0;
+}
+
+.btnContainer button {
+  position: relative;
+  height: 60px;  
+  width: 60px;  
+  border-radius: 50%;
+  background-color: #4CAF50;
+  color: hsl(259, 100%, 65%);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  scale: .8;
+  margin: 0 auto;
+  z-index: 5;
+}
+
+button img {
+	scale: .6;
+}
+
+hr {
+	position: absolute;
+	top: 50%;
+	width: 100%;
+	z-index: 2;
+	color: hsl(0, 0%, 94%);
+}
+
+
+/* results container */
+
+.resultsContainer p {
+	font-size: 32px;
+	font-weight: bold;
 }
