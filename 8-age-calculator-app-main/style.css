@@ -21,10 +21,24 @@ button {
 }
 
 
+/* init stuff */
+
+@font-face {
+	font-family: 'Poppins';
+	src: url("./assets/fonts/Poppins-Regular.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: 'Poppins-BoldItalic';
+	src: url("./assets/fonts/Poppins-BoldItalic.ttf") format("truetype");
+}
+
+
 
 /* general */ 
 
 main {
+	font-family: 'Poppins';
 	height: 100vh;
 	background-color: hsl(0, 0%, 94%);
 	display: flex;
@@ -35,8 +49,8 @@ main {
 #calcContainer {
 	background-color: white;
 	padding: 30px;
-	border-radius: 10px;
-	border-bottom-right-radius: 50px;
+	border-radius: 30px;
+	border-bottom-right-radius: 90px;
 }
 
 /* form */
@@ -49,11 +63,15 @@ form {
 
 form label {
 	display: block;
+	font-size: 0.7em;
+	margin-bottom: 5px;
 }
 
 form input {
 	padding: 10px;
-	width: 80px;
+	width: 100px;
+	border-radius: 5px;
+	border-style: solid;
 }
 
 
@@ -68,19 +86,18 @@ form input {
   height: 60px;  
   width: 60px;  
   border-radius: 50%;
-  background-color: #4CAF50;
+  background-color: hsl(259, 100%, 65%);
   color: hsl(259, 100%, 65%);
   cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
-  scale: .8;
   margin: 0 auto;
   z-index: 5;
 }
 
-button img {
-	scale: .6;
+.btnContainer button:hover {
+	background-color: hsl(0, 0%, 8%);
 }
 
 hr {
@@ -88,13 +105,20 @@ hr {
 	top: 50%;
 	width: 100%;
 	z-index: 2;
-	color: hsl(0, 0%, 94%);
+	background-color: hsl(0, 0%, 94%);
+	border: none;
+	height: 3px;
 }
 
 
 /* results container */
 
 .resultsContainer p {
-	font-size: 32px;
-	font-weight: bold;
+	font-size: 3.5em;
+	font-family: "Poppins-BoldItalic";
+	line-height: 100%;
+}
+
+.result {
+	color: hsl(259, 100%, 65%);
 }
