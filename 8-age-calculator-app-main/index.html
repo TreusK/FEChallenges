@@ -15,20 +15,20 @@
     <div id='calcContainer'>
       <form>
         <div>
-          <label>DAY</label>
-          <input type='numeric' />
+          <label for='day'>DAY</label>
+          <input type='numeric' name='day' id='day' maxlength='2' />
         </div>
         <div>
-          <label>MONTH</label>
-          <input type='numeric' />
+          <label for='month'>MONTH</label>
+          <input type='numeric' name='month' id='month' maxlength='2' />
         </div>
         <div>
-          <label>YEAR</label>
-          <input type='numeric' />
+          <label for='year'>YEAR</label>
+          <input type='numeric' name='year' id='year' maxlength='4' />
         </div>
       </form>
       <div class='btnContainer'>
-        <button><img src='./assets/images/icon-arrow.svg'></button>
+        <button class='submitBtn'><img src='./assets/images/icon-arrow.svg'></button>
         <hr />
       </div>
       <div class='resultsContainer'>
@@ -39,6 +39,7 @@
     </div>
   </main>
   
+<script type="text/javascript" src='./moment.js'></script>
 <script type="text/javascript" src='./script.js'></script>
 </body>
 </html>
