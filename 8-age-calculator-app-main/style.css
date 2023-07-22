@@ -90,6 +90,10 @@ form .error {
 	margin-top: 5px;
 }
 
+.errorColor {
+	color: red;
+}
+
 
 /* button container */
 .btnContainer {

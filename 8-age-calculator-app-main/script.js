@@ -3,6 +3,8 @@ let dayInput = document.querySelector('#day');
 let monthInput = document.querySelector('#month');
 let yearInput = document.querySelector('#year');
 
+let label = document.querySelectorAll('.label');
+
 let daysRes = document.querySelector('.daysResult');
 let monthsRes = document.querySelector('.monthsResult');
 let yearsRes = document.querySelector('.yearsResult');
@@ -17,12 +19,9 @@ let submitBtn = document.querySelector('.submitBtn')
 //const
 const month = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 
-
+console.log(label)
 //events
-submitBtn.addEventListener('click', handleAgeForm)
-dayInput.addEventListener('focus', clearError);
-monthInput.addEventListener('focus', clearError);
-yearInput.addEventListener('focus', clearError);
+submitBtn.addEventListener('click', handleAgeForm);
 
 //event functions
 function validateDate(d, m, y) {
@@ -36,27 +35,37 @@ function validateDate(d, m, y) {
 	let res = Date.parse(dateString);
 	if(isNaN(res)) {
 		valid = false;
+		errorDay.innerText = 'Invalid date'
 	}
 
 	if(d > 31 || d < 1) {
-		errorDay.innerText = "Must be a valid day"
-		valid = false
+		errorDay.innerText = "Must be a valid day";
+		valid = false;
 	}
 
 	if(m > 12 || m < 1) {
-		errorMonth.innerText = "Must be a valid month"
+		errorMonth.innerText = "Must be a valid month";
+		valid = false;
 	}
 
 	let today = new Date();
 	let yearNow = today.getFullYear();
 	if(y > yearNow || y < 1000) {
-		errorYear.innerText = "Must be a valid year"
+		errorYear.innerText = "Must be a valid year";
+		valid = false;
+	}
+
+	if(valid == false) {
+		label.forEach(elem => elem.classList.add('errorColor'))
 	}
 
 	return valid;
 }
 
 function handleAgeForm() {
+
+	clearError();
+
 	let d1 = dayInput.value;
 	let m1 = monthInput.value;
 	let y1 = yearInput.value;
@@ -87,7 +96,10 @@ function handleAgeForm() {
 }
 
 
-function clearError() {
-
+function clearError(e) {
+	errorDay.innerText = "\u00a0";
+	errorMonth.innerText = "\u00a0";
+	errorYear.innerText = "\u00a0";
+	label.forEach(elem => elem.classList.remove('errorColor'))
 }
   
