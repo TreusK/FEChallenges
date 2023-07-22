@@ -10,20 +10,44 @@ let submitBtn = document.querySelector('.submitBtn')
 
 submitBtn.addEventListener('click', handleAgeForm)
 
+const month = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+
+function validateDate(dateString) {
+	let res = Date.parse(dateString);
+	return (!isNaN(res));
+}
+
 function handleAgeForm() {
-	let date = validateDate();
-	
-	if(!isNaN(date)) {
-		console.log(new Date(date))
+	let d1 = dayInput.value;
+	let m1 = monthInput.value;
+	let y1 = yearInput.value;
+	let dateString = y1+ '-' +m1+ '-' +d1;
+
+	console.log(dateString)
+
+	if(!validateDate(dateString)) {
+		return
 	}
-}
 
-function validateDate() {
-	let day = dayInput.value;
-	let month = monthInput.value;
-	let year = yearInput.value;
+	let today = new Date();
+  let d2 = today.getDate();
+  let m2 = 1 + today.getMonth();
+  let y2 = today.getFullYear();
+  
+  if(d1 > d2){
+  	d2 = d2 + month[m2 - 1];
+  	m2 = m2 - 1;
+  }
+  if(m1 > m2){
+  	m2 = m2 + 12;
+  	y2 = y2 - 1;
+  }
 
-	let dateString = year+ '-' +month+ '-' +day;
+  let dFinal = d2 - d1;
+  let mFinal = m2 - m1;
+  let yFinal = y2 - y1;
 
-	return Date.parse(dateString);
-}
+  console.log(`you are ${yFinal} years ${mFinal} months ${dFinal} days old`)
+ }
+
+  
