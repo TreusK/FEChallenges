@@ -109,9 +109,6 @@ form .error {
   background-color: hsl(259, 100%, 65%);
   color: hsl(259, 100%, 65%);
   cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   margin: 0 auto;
   z-index: 5;
 }
@@ -141,4 +138,20 @@ hr {
 
 .result {
 	color: hsl(259, 100%, 65%);
+}
+
+
+/* media queries */
+@media(min-width: 600px) {
+	.btnContainer button {
+		margin: 0 0 0 auto;
+	}
+
+	#calcContainer {
+		width: 550px;
+	}
+
+	form {
+		justify-content: flex-start;
+	}
 }

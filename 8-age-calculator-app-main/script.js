@@ -19,9 +19,10 @@ let submitBtn = document.querySelector('.submitBtn')
 //const
 const month = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 
-console.log(label)
+
 //events
 submitBtn.addEventListener('click', handleAgeForm);
+
 
 //event functions
 function validateDate(d, m, y) {
@@ -100,6 +101,9 @@ function clearError(e) {
 	errorDay.innerText = "\u00a0";
 	errorMonth.innerText = "\u00a0";
 	errorYear.innerText = "\u00a0";
+	daysRes.innerText = "--";
+  monthsRes.innerText = "--";
+  yearsRes.innerText = "--";
 	label.forEach(elem => elem.classList.remove('errorColor'))
 }
   
