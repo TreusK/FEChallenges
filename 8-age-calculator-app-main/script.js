@@ -25,7 +25,9 @@ function handleAgeForm() {
 
 	console.log(dateString)
 
+	//if the date isn't valid, stop
 	if(!validateDate(dateString)) {
+		console.log('bzzt not valid')
 		return
 	}
 
@@ -43,11 +45,10 @@ function handleAgeForm() {
   	y2 = y2 - 1;
   }
 
-  let dFinal = d2 - d1;
-  let mFinal = m2 - m1;
-  let yFinal = y2 - y1;
+  daysRes.innerText = d2 - d1;
+  monthsRes.innerText = m2 - m1;
+  yearsRes.innerText = y2 - y1;
 
-  console.log(`you are ${yFinal} years ${mFinal} months ${dFinal} days old`)
  }
 
   

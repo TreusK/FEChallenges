@@ -33,7 +33,10 @@ button {
 	src: url("./assets/fonts/Poppins-BoldItalic.ttf") format("truetype");
 }
 
-
+@font-face {
+	font-family: 'Poppins-Bold';
+	src: url("./assets/fonts/Poppins-Bold.ttf") format("truetype");
+}
 
 /* general */ 
 
@@ -72,6 +75,7 @@ form input {
 	width: 100px;
 	border-radius: 5px;
 	border-style: solid;
+	font-family: 'Poppins-Bold';
 }
 
 
