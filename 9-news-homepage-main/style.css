@@ -35,55 +35,103 @@ header {
 /* Main */
 .mainContainer {
 	display: grid;
-	grid-template-areas: 'bigNews bigNews sideNews'
-						 'bigNews bigNews sideNews'
-						 'btmNews btmNews btmNews';
+	grid-template-columns: repeat(3, minmax(100px, 1fr));
+	grid-template-rows: repeat(3, minmax(100px, 1fr));
 	background: lightslategray;
 }
 
 
 /* Big News */
 .bigNews {
-	grid-area: bigNews;
+	grid-area: 1 / 1 / 3 / 3;
 	display: grid;
-	grid-template-areas: 'image image'
-						 'title note ';
+	grid-template-columns: repeat(2, minmax(100px, 1fr));
 	background: lightcyan;
 	padding: 20px;
 	padding-top: 0;
+	gap: 20px;
 }
 
 .bigNewsImgContainer {
-	grid-area: image;
-	margin-bottom: 20px;
+	grid-area: 1 / 1 / 1 / 3;
 }
 .bigNews h1 {
-	grid-area: title;
-	margin-right: 20px;
+	grid-area: 2 / 1 / 2 / 2;
 	font-family: 'Inter-ExtraBold', sans-serif;
+	font-size: 3rem;
+	line-height: 100%;
+	padding-bottom: 1rem;
 }
 .bigNewsInfoContainer {
-	grid-area: note;
+	grid-area: 2 / 2 / 2 / 3;
 }
 
-.bigNews button {
+.bigNewsInfoContainer p {
+	padding-bottom: 2rem;
+}
 
+
+.bigNews button {
+	margin-top: auto;
+  background: hsl(5, 85%, 63%);
+  color: white;
+  letter-spacing: 3px;
+  padding: .8rem 2rem;
+  cursor: pointer;
+  font-size: .8rem;
+}
+
+.bigNews button:hover {
+	background: hsl(240, 100%, 5%);
 }
 
 
 
 /* Side News */
 .sideNews {
-	grid-area: sideNews;
-	background: lightgreen;
+	grid-area: 1 / 3 / 3 / 4;
+	background: hsl(240, 100%, 5%);
 	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.sideNews h2 {
+	color: hsl(35, 77%, 62%);
+	padding-top: .5rem;
+	font-size: 1.8rem;
+	font-family: 'Inter-Bold', sans-serif;
+}
+
+.sideNews p {
+	color: hsl(233, 8%, 79%);
+}
+
+.sideNews h3 {
+	color: hsl(36, 100%, 99%);
+	margin-bottom: 10px;
+}
+
+
+.sideNewSingleContainer {
+	padding: 1em 0;
+	border-bottom: 1px solid hsl(233, 8%, 79%);
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.lastSideNew {
+	border-bottom: none;
 }
 
 
 
 /* Bottom News */
 .bottomNews {
-	grid-area: btmNews;
+	grid-area: 3 / 1 / 3 / 4;
 	display: flex;
 	justify-content: space-between;
 	background: lightred;
