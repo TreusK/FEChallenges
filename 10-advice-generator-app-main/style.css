@@ -31,6 +31,8 @@ main {
 }
 .newAdviceBtn:hover {
 	cursor: pointer;
+  color: hsl(150, 100%, 66%);
+  box-shadow: 0 0 15px hsl(150, 100%, 66%);
 }
 
 .imgContainer {
@@ -50,4 +52,13 @@ main {
 	font-size: 1.4rem;
 	line-height: 1.4;
 	font-weight: bold;
+}
+
+@media (max-width: 400px) {
+	main {
+		min-width: 200px;
+	}
+	.container {
+		width: 90%;
+	}
 }
